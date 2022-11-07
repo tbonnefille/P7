@@ -23,13 +23,6 @@ ul {
 }
 
 
-
-
-
-
-
-
-
 body {
 
     font-family: 'Montserrat', sans-serif;
@@ -51,28 +44,48 @@ body {
 }
 
 
-nav ul {
+#logo {
+
+    width: auto;
+    text-align: center;
+    padding: 20px;
+
+}
+
+#logo-img {
+
+    max-width: 100%;
+    height: auto;
+}
+
+.nav {
+
+
+    width: 40%;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+#navUl {
 
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-content: center;
-    width: 250px;
-
+    width: 100%;
 
     font-weight: 500;
     font-size: 24px;
     line-height: 142.6%;
 
-    /* or 34px */
-
-
-
 }
 
-
-nav ul li:hover {
+.li:hover {
 
     text-decoration-line: underline;
     color: #FF6060;
@@ -80,27 +93,17 @@ nav ul li:hover {
 }
 
 
-
-
-
-
-
-
-
 main {
 
     margin-left: 10%;
     margin-right: 10%;
 
-
     padding-left: 5%;
     padding-right: 5%;
 
-
-
     border-radius: 25px;
 
-   /* border: red solid 1px;*/
+    /* border: red solid 1px;*/
     margin: 1%;
     color: #FF6060;
 
@@ -108,32 +111,24 @@ main {
 
 .section_1 {
 
-
     height: 223px;
-
     display: flex;
     justify-content: center;
-
     margin: 1%;
 }
 
 #Mask_Group1 {
 
-
     width: 1240px;
     height: 223px;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
-
 
     font-weight: 500;
     font-size: 48px;
     line-height: 142.6%;
-
-
 
     background: #000000;
     border-radius: 25px;
@@ -141,8 +136,6 @@ main {
     mix-blend-mode: Darken;
 
     border: #000000 solid 2px;
-
-
 
     background: url(./images/IMG.jpg);
 
@@ -158,38 +151,34 @@ main {
     justify-content: center;
     align-items: center;
 
-
     font-weight: 500;
     font-size: 48px;
     line-height: 142.6%;
 
-
     border-radius: 25px;
     filter: brightness(75%);
 
-
     border: #000000 solid 2px;
-
-
 
     background: url(./images/kalen-emsley-Bkci_8qcdvQ-unsplash\ 2.jpg);
 
-
-
-
-
-
-
 }
-
 
 .banner_txt {
 
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 142.6%;
+
+    /* or 68px */
+    display: flex;
+    align-items: flex-end;
+
     color: #FFFFFF;
 
-
 }
-
 
 #gallery {
 
@@ -200,10 +189,6 @@ main {
 
 
     margin-bottom: 5%;
-
-
-
-
     background: #F7F7F7;
 
 }
@@ -212,14 +197,14 @@ main {
 
     height: 340px;
     width: 30%;
-
     border-radius: 10px;
-
-
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    padding-left: 1%;
     background-color: #FF6060;
     margin: 1%;
-    border: blue solid 1px;
-
+    border: black solid 1px;
 
     /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);*/
     border-radius: 10px;
@@ -230,9 +215,12 @@ main {
 
 #wrap_404 {
 
-    text-align: center;
     color: #FF6060;
     margin-bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
 
@@ -242,15 +230,17 @@ main {
     font-weight: 700;
     font-size: 288px;
     line-height: 142.6%;
-    margin: 0;
+    text-align: center;
+
 }
 
-#oops {
+#oups {
 
     font-weight: 500;
     font-size: 36px;
     line-height: 142.6%;
     margin-bottom: 10%;
+    text-align: center;
 }
 
 #link_404 {
@@ -262,6 +252,8 @@ main {
     line-height: 142.6%;
 
     text-decoration-line: underline;
+    text-align: center;
+    margin-bottom: 10%;
 }
 
 
@@ -300,18 +292,13 @@ main {
     padding-left: 2%;
     padding-right: 2%;
 
-
     border: #000000 solid 1px;
-    
-    
-    
 
 }
 
 
 .dropdownlarge {
 
-    
     margin-top: 2%;
     margin-bottom: 2%;
     width: 80%;
@@ -326,6 +313,8 @@ main {
     border-radius: 5px;
     padding-top: 1%;
     padding-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
     top: -5px;
     position: relative;
 }
@@ -349,17 +338,28 @@ main {
 
     background-color: coral;
 
-
 }
 
 
 /*FICHE LOGEMENT*/
 
-#title-host {
+
+#wrapper {
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+
+#host-rating {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 
@@ -367,7 +367,15 @@ main {
 
     display: flex;
     flex-direction: row;
+    width: 100%;
 
+    justify-content: flex-end;
+
+}
+
+#name {
+
+    padding-right: 2%;
 }
 
 #circle {
@@ -379,23 +387,11 @@ main {
 
 }
 
-#tag-rating {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-
-
- 
-
 .dropdown {
 
     background: #FF6060;
     border-radius: 10px;
     height: 52px;
-
 
     font-weight: 500;
     font-size: 24px;
@@ -410,13 +406,10 @@ main {
     padding-left: 2%;
     padding-right: 2%;
 
-
     border: #000000 solid 1px;
     margin-top: 2%;
 
-
 }
-
 
 .dropdown2 {
 
@@ -425,13 +418,10 @@ main {
     justify-content: space-between;
 }
 
-
 .dd2-element {
 
     width: 48%;
 }
-
-
 
 .tag {
 
@@ -446,7 +436,6 @@ main {
     justify-content: center;
 }
 
-
 #tag-wrap {
 
     display: flex;
@@ -454,8 +443,6 @@ main {
     text-align: center;
 
 }
-
-
 
 .carrousel-wrap {
 
@@ -553,4 +540,186 @@ footer {
 #footer-wrap {
 
     padding-top: 5%;
+}
+
+
+/*MEDIA QUERIES*/
+
+/*TABLETS*/
+
+@media all and (min-width:769px) and (max-width:992px) {
+
+    .card {
+
+        width: 46%;
+
+    }
+
+    .nav {
+
+        width: 60%;
+    }
+
+    #navUl {
+
+        font-size: 18px;
+    }
+
+    .banner_txt {
+
+        color: red;
+
+        font-size: 36px;
+        line-height: 100%;
+        padding-left: 5%;
+
+        display: flex;
+        align-items: flex-end;
+
+        /* color: #FFFFFF;*/
+
+    }
+
+    .dropdownlarge-close {
+
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 100%;
+    }
+
+
+    .dropdownlarge {
+
+
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 100%;
+
+    }
+
+    #big_404 {
+
+        font-size: 192px;
+        margin-top: 20%;
+
+    }
+
+    #oups {
+
+        font-size: 24px;
+        margin-bottom: 15%;
+    }
+
+    #link_404 {
+
+        font-size: 21px;
+        margin-bottom: 25%;
+    }
+
+}
+
+
+
+/*MOBILES*/
+
+@media all and (max-width: 768px) {
+
+    .nav {
+
+        width: 68%;
+    }
+
+    #navUl {
+
+        font-size: 12px;
+
+    }
+
+    #logo {
+
+        background-size: 162px 68px;
+
+    }
+
+
+    .banner_txt {
+
+        color: #000000;
+
+        font-size: 24px;
+        line-height: 100%;
+        padding-left: 5%;
+
+        display: flex;
+        align-items: flex-end;
+
+        /* color: #FFFFFF;*/
+
+    }
+
+    #gallery {
+
+        margin-top: 4%;
+    }
+
+    .card {
+
+        width: 98%;
+        margin-bottom: 2%;
+
+    }
+
+    .ddl-wrap {
+
+        margin-top: 5%;
+    }
+
+    #big_404 {
+
+        font-size: 96px;
+        margin-top: 40%;
+
+    }
+
+    #oups {
+
+        font-size: 18px;
+        margin-bottom: 30%;
+    }
+
+    #link_404 {
+
+        font-size: 14px;
+        margin-bottom: 50%;
+    }
+
+    .dropdownlarge-close {
+
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 100%;
+    }
+
+    .dropdownlarge {
+
+        margin-top: 2%;
+        margin-bottom: 2%;
+        width: 100%;
+
+    }
+
+    .dropdown2 {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .dd2-element {
+
+        width: 100%;
+    }
+
+
 }
