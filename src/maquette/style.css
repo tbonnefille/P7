@@ -26,9 +26,7 @@ ul {
 body {
 
     font-family: 'Montserrat', sans-serif;
-
     background: white;
-
 
 }
 
@@ -39,7 +37,8 @@ body {
     justify-content: space-between;
     padding-left: 5%;
     padding-right: 5%;
-
+    margin-bottom: 4%;
+  
 
 }
 
@@ -48,7 +47,10 @@ body {
 
     width: auto;
     text-align: center;
-    padding: 20px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+   
 
 }
 
@@ -56,18 +58,18 @@ body {
 
     max-width: 100%;
     height: auto;
+   
 }
 
 .nav {
 
-
-    width: 40%;
-
+    width: 30%;
     display: flex;
     align-items: center;
     text-align: center;
 
-
+   
+    
 }
 
 #navUl {
@@ -78,7 +80,6 @@ body {
     justify-content: space-between;
     align-content: center;
     width: 100%;
-
     font-weight: 500;
     font-size: 24px;
     line-height: 142.6%;
@@ -92,20 +93,16 @@ body {
 
 }
 
-
 main {
 
-    margin-left: 10%;
-    margin-right: 10%;
-
-    padding-left: 5%;
-    padding-right: 5%;
-
+    margin-left: 5%;
+    margin-right: 5%;
+    
     border-radius: 25px;
-
     /* border: red solid 1px;*/
-    margin: 1%;
+    
     color: #FF6060;
+   
 
 }
 
@@ -114,69 +111,45 @@ main {
     height: 223px;
     display: flex;
     justify-content: center;
-    margin: 1%;
-}
-
-#Mask_Group1 {
-
-    width: 1240px;
-    height: 223px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 142.6%;
-
-    background: #000000;
-    border-radius: 25px;
-    Opacity: 130%;
-    mix-blend-mode: Darken;
-
-    border: #000000 solid 2px;
-
-    background: url(./images/IMG.jpg);
+    margin-bottom: 4%;
 
 }
 
 .Mask_Group {
 
-    width: 1240px;
-    height: 223px;
-
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
+    position: relative;
+    text-align: center;
     font-weight: 500;
     font-size: 48px;
     line-height: 142.6%;
+    border-radius: 25px;
+    width: 100%;
+    
+}
 
+.banner-img {
+
+    width: 100%;
+    height: 100%;
     border-radius: 25px;
     filter: brightness(75%);
 
-    border: #000000 solid 2px;
-
-    background: url(./images/kalen-emsley-Bkci_8qcdvQ-unsplash\ 2.jpg);
-
 }
+
+
 
 .banner_txt {
 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #F7F7F7;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
     line-height: 142.6%;
-
-    /* or 68px */
-    display: flex;
-    align-items: flex-end;
-
-    color: #FFFFFF;
 
 }
 
@@ -186,10 +159,12 @@ main {
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-
-
+    border-radius: 25px;
     margin-bottom: 5%;
-    background: #F7F7F7;
+    padding: 4%;
+
+    /* background: #F6F6F6;*/
+    background-color: lightgrey;
 
 }
 
@@ -203,11 +178,33 @@ main {
     color: white;
     padding-left: 1%;
     background-color: #FF6060;
-    margin: 1%;
-    border: black solid 1px;
+    margin-bottom: 4%;
 
     /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);*/
-    border-radius: 10px;
+
+}
+
+.card-p {
+
+    width: 100%;
+
+    margin-top: 2%;
+
+}
+
+.cardText {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 95%;
+    margin-bottom: 5%;
+}
+
+.card-ul {
+
+    padding-left: 0%;
 }
 
 
@@ -250,7 +247,6 @@ main {
     font-weight: 500;
     font-size: 18px;
     line-height: 142.6%;
-
     text-decoration-line: underline;
     text-align: center;
     margin-bottom: 10%;
@@ -264,6 +260,7 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
 }
 
 .dropdownlarge-close {
@@ -343,7 +340,6 @@ main {
 
 /*FICHE LOGEMENT*/
 
-
 #wrapper {
 
     display: flex;
@@ -353,7 +349,6 @@ main {
     margin-top: 1%;
 }
 
-
 #host-rating {
 
     display: flex;
@@ -361,7 +356,6 @@ main {
     flex-wrap: wrap;
     justify-content: flex-end;
 }
-
 
 #HOST {
 
@@ -526,20 +520,28 @@ footer {
     height: 209px;
     background: #000000;
     color: white;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
 #logo_footer {
 
-    text-align: center;
-    margin-bottom: 2%;
+    width: 100%;
+    margin-bottom: 10%;
 
 }
 
 #footer-wrap {
 
-    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+
 }
 
 
@@ -555,11 +557,6 @@ footer {
 
     }
 
-    .nav {
-
-        width: 60%;
-    }
-
     #navUl {
 
         font-size: 18px;
@@ -567,18 +564,10 @@ footer {
 
     .banner_txt {
 
-        color: red;
-
         font-size: 36px;
-        line-height: 100%;
-        padding-left: 5%;
-
-        display: flex;
-        align-items: flex-end;
-
-        /* color: #FFFFFF;*/
 
     }
+
 
     .dropdownlarge-close {
 
@@ -626,7 +615,7 @@ footer {
 
     .nav {
 
-        width: 68%;
+        width: 80%;
     }
 
     #navUl {
@@ -634,26 +623,13 @@ footer {
         font-size: 12px;
 
     }
-
-    #logo {
-
-        background-size: 162px 68px;
-
-    }
-
-
+   
     .banner_txt {
-
-        color: #000000;
 
         font-size: 24px;
         line-height: 100%;
         padding-left: 5%;
 
-        display: flex;
-        align-items: flex-end;
-
-        /* color: #FFFFFF;*/
 
     }
 
