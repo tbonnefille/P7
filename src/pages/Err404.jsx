@@ -1,17 +1,14 @@
 import React from "react";
 
 import Header from "../components/Header";
-import Banner from "../components/Banner";
-import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
+import Err404page from "../components/Err404";
 
-
-export default function Home() {
+export default function Err404() {
   return (
     <div>
       <Header />,
-      <Banner />,
-      <Gallery />,
+      <Err404page />,
       <Footer />
     </div>
   );

@@ -1,17 +1,16 @@
 import React from "react";
 
 import Header from "../components/Header";
-import Banner from "../components/Banner";
-import Gallery from "../components/Gallery";
+import BannerAP from "../components/BannerAP";
+import Apropos from "../components/APropos";
 import Footer from "../components/Footer";
 
-
-export default function Home() {
+export default function APropos() {
   return (
     <div>
       <Header />,
-      <Banner />,
-      <Gallery />,
+      <BannerAP />,
+      <Apropos />,
       <Footer />
     </div>
   );

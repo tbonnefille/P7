@@ -16,6 +16,7 @@ a:link {
 
 a {
     color: #FF6060;
+
 }
 
 ul {
@@ -26,7 +27,7 @@ ul {
 body {
 
     font-family: 'Montserrat', sans-serif;
-    background: white;
+    background: #FFFFFF;
 
 }
 
@@ -38,7 +39,6 @@ body {
     padding-left: 5%;
     padding-right: 5%;
     margin-bottom: 4%;
-  
 
 }
 
@@ -50,15 +50,13 @@ body {
     padding-top: 5%;
     padding-bottom: 5%;
 
-   
-
 }
 
 #logo-img {
 
     max-width: 100%;
     height: auto;
-   
+
 }
 
 .nav {
@@ -68,8 +66,6 @@ body {
     align-items: center;
     text-align: center;
 
-   
-    
 }
 
 #navUl {
@@ -97,19 +93,18 @@ main {
 
     margin-left: 5%;
     margin-right: 5%;
-    
     border-radius: 25px;
     /* border: red solid 1px;*/
-    
     color: #FF6060;
-   
 
 }
 
 .section_1 {
-    
+
     margin-bottom: 4%;
-   
+    margin-left: 5%;
+    margin-right: 5%;
+
 }
 
 .banner {
@@ -127,7 +122,7 @@ main {
     background-image: url(./images/IMG.jpg);
     background-size: cover;
     background-position: center center;
-          
+
 }
 
 .bannerAP {
@@ -146,11 +141,8 @@ main {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-  
-          
-}
-/*https://grafikart.fr/tutoriels/reset-normalize-css-1096*/
 
+}
 
 .banner_txt {
 
@@ -163,11 +155,10 @@ main {
     font-weight: 500;
     font-size: 48px;
     line-height: 142.6%;
-   color: #FFFFFF;
-   background-color: rgba(0,0,0,0.25);
-   height: 100%;
-   width: 100%;
-   
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.25);
+    height: 100%;
+    width: 100%;
 
 }
 
@@ -180,7 +171,6 @@ main {
     border-radius: 25px;
     margin-bottom: 5%;
     padding: 4%;
-
     /* background: #F6F6F6;*/
     background-color: lightgrey;
 
@@ -197,7 +187,6 @@ main {
     padding-left: 1%;
     background-color: #FF6060;
     margin-bottom: 4%;
-
     /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);*/
 
 }
@@ -205,7 +194,6 @@ main {
 .card-p {
 
     width: 100%;
-
     margin-top: 2%;
 
 }
@@ -223,8 +211,13 @@ main {
 .card-ul {
 
     padding-left: 0%;
+
 }
 
+.card-ul a {
+
+    color: blue;
+}
 
 /* 404*/
 
@@ -293,24 +286,19 @@ main {
     background: #FF6060;
     border-radius: 5px;
     height: 47px;
-
     font-weight: 500;
     font-size: 24px;
     line-height: 142.6%;
-
     /* or 34px */
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     color: #FFFFFF;
     padding-left: 2%;
     padding-right: 2%;
-
     border: #000000 solid 1px;
 
 }
-
 
 .dropdownlarge {
 
@@ -324,7 +312,7 @@ main {
 
     color: #FF6060;
     /* background: #F7F7F7;*/
-    background-color: black;
+    background-color: lightgrey;
     border-radius: 5px;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -365,6 +353,9 @@ main {
     justify-content: space-between;
     margin-bottom: 1%;
     margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: #FF6060;
 }
 
 #host-rating {
@@ -423,14 +414,18 @@ main {
 
 }
 
-.dropdown2 {
+.Content {
 
+    margin-left: 5%;
+    margin-right: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: nowrap;
+
 }
 
-.dd2-element {
+.c-element {
 
     width: 48%;
 }
@@ -458,10 +453,14 @@ main {
 
 .carrousel-wrap {
 
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .carrouselMockup {
@@ -473,7 +472,6 @@ main {
     width: 100%;
     height: 415px;
     margin-bottom: 1.5%;
-
     background: url(./images/Background.jpg);
 
 }
@@ -498,12 +496,20 @@ main {
     padding-right: 1%;
 }
 
+
 /*COMPOSANT DESKTOP*/
 
 #groupe_2 {
 
     color: #666666;
     font-size: 14px;
+    margin-left: 5%;
+}
+
+#thumb {
+
+    margin-left: 5%;
+
 }
 
 .rectangle_2 {
@@ -518,22 +524,46 @@ main {
     align-items: flex-end;
 }
 
+#contentDDL {
+
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 75%;
+
+}
+
+#compDDL {
+
+    margin-left: 5%;
+    width: 80%;
+
+}
+
+#carrouselComp-wrap {
+
+    width: 75%;
+    margin-left: 5%;
+}
+
 #petitCarrousel {
 
     width: 335px;
     height: 255px;
     border-radius: 10px;
-    border: #000000 solid 1px;
-
     background: url(./images/Background.jpg);
-    background-size: 335px 255px;
-
+    background-size: cover;
+    background-position: center center;
+    margin-left: 5%;
+    margin-bottom: 3%;
 }
 
 
 /*FOOTER*/
 
-footer {
+#footer {
 
     height: 209px;
     background: #000000;
@@ -641,7 +671,7 @@ footer {
         font-size: 12px;
 
     }
-   
+
     .banner_txt {
 
         font-size: 24px;
