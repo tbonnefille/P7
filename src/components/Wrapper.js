@@ -1,52 +1,78 @@
 import React from "react";
 import "../style.css";
 
+import Datas from "../data/logements.json";
+
+import { useParams} from 'react-router-dom';
+
+
+
+
 function Wrapper() {
+
+/* Récupère la bonne fiche */
+const id = useParams();
+const ficheLogement = Datas.find(logement => logement.id === id.id);
+
+console.table(ficheLogement)
+
+/* Tags */
+const tagsLogement = ficheLogement.tags.map((tags, index) => {
+    return <div className="tag" key={index}> {tags}</div>
+});
+
+
+
+console.log("AUTEUR = "+ficheLogement.host.name)
+
+
+
+
+
+
+const description = ficheLogement.description;
+
+console.log("desc = "+description)
+
   return (
     <section id="wrapper">
 
             <div id="title-tag">
 
                 <div>
-                    <h1>Cozy loft on the Canal Saint-Martin</h1>
-                    <p>Paris, Île-de-France</p>
+                    <h1>{ficheLogement.title}</h1>
+                    <p>{ficheLogement.location}</p>
                 </div>
 
                 <div id="tag-wrap">
 
-                    <div class="tag">
-                        <p>Cozy</p>
-                    </div>
+                
+                    {tagsLogement}
+                    
 
-                    <div class="tag">
-                        <p>Canal</p>
-                    </div>
-
-                    <div class="tag">
-                        <p>Paris 10</p>
-                    </div>
+                   
                 </div>
 
             </div>
 
             <div id="host-rating">
 
-                <div id="HOST">
+                <div id="host">
                     <div id="name">
-                        <ul>
-                            <li>Alexandre</li>
-                            <li>Dumas</li>
-                        </ul>
+
+                 {ficheLogement.host.name}
+
+
+                       
                     </div>
-                    <div id="circle"></div>
+                    <div id="circle">
+                    <img className="imgPortrait" src={ficheLogement.host.picture} alt="portrait" />
+                    </div>
                 </div>
 
                 <div id="rating">
-                    <i class="fas fa-star star fa-xl"></i>P
-                    <i class="fas fa-star star fa-xl"></i>P
-                    <i class="fas fa-star star fa-xl"></i>P
-                    <i class="fa-regular fa-star fa-xl"></i>V
-                    <i class="fa-regular fa-star fa-xl"></i>V
+                   &#9733;&#9733;&#9733;&#9734;&#9734;
+                   
                 </div>
 
             </div>

@@ -1,13 +1,9 @@
-@font-face {
+/* @font-face {
     font-family: "Montserrat";
     src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+} */
 
-
-
-
-}
-
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 
 a:link {
@@ -21,6 +17,7 @@ a {
 
 ul {
     list-style-type: none;
+    padding-left: 0%;
 }
 
 
@@ -82,6 +79,20 @@ body {
 
 }
 
+#locationHome {
+
+    text-decoration-line: underline;
+    color: #FF6060;
+}
+
+#locationAP {
+
+    text-decoration-line: underline;
+    color: #FF6060;
+}
+
+
+
 .li:hover {
 
     text-decoration-line: underline;
@@ -94,8 +105,7 @@ main {
     margin-left: 5%;
     margin-right: 5%;
     border-radius: 25px;
-    /* border: red solid 1px;*/
-    color: #FF6060;
+       color: #FF6060;
 
 }
 
@@ -171,10 +181,34 @@ main {
     border-radius: 25px;
     margin-bottom: 5%;
     padding: 4%;
-    /* background: #F6F6F6;*/
-    background-color: lightgrey;
+        background-color: #F7F7F7;
 
 }
+
+
+
+
+.gallery {
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    margin-bottom: 5%;
+    padding: 4%;
+    background-color: #F7F7F7;
+        margin-left: 5%;
+        margin-right: 5%;
+
+}
+
+
+
+
+
+
+
 
 .card {
 
@@ -203,7 +237,6 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
     width: 95%;
     margin-bottom: 5%;
 }
@@ -218,6 +251,56 @@ main {
 
     color: blue;
 }
+
+.testcard {
+
+    height: 340px;
+    width: 100%;
+    border-radius: 10px;
+    
+    color: white;
+   
+    background-color: #FF6060;
+    margin-bottom: 4%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+    
+
+
+
+}
+
+.img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+
+    object-fit: cover;
+
+    background-color: cadetblue;
+}
+
+
+.testcard a {
+
+    color: black;
+}
+
+
+.xxx {
+
+
+    width: 30%;
+    color: purple;
+    
+    
+}
+
+#aaa {
+
+    color: red;
+}
+
 
 /* 404*/
 
@@ -312,7 +395,7 @@ main {
 
     color: #FF6060;
     /* background: #F7F7F7;*/
-    background-color: lightgrey;
+    background-color: #E5E5E5;
     border-radius: 5px;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -325,20 +408,16 @@ main {
 .Miguel {
 
     width: 100px;
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
     line-height: 142.6%;
-
     /* or 19px */
     display: flex;
     align-items: center;
     justify-content: center;
-
     color: #FFFFFF;
-
     background-color: coral;
 
 }
@@ -351,11 +430,11 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 1%;
     margin-top: 1%;
     margin-left: 5%;
     margin-right: 5%;
     color: #FF6060;
+   
 }
 
 #host-rating {
@@ -364,14 +443,20 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
+    
 }
 
-#HOST {
+#rating {
+
+    font-size: 42px;
+
+}
+
+#host {
 
     display: flex;
     flex-direction: row;
     width: 100%;
-
     justify-content: flex-end;
 
 }
@@ -390,39 +475,42 @@ main {
 
 }
 
+.imgPortrait {
+
+    border-radius: 50%;
+    object-fit: cover;
+    height: 64px;
+    width: 64px;
+}
+
 .dropdown {
 
     background: #FF6060;
     border-radius: 10px;
     height: 52px;
-
     font-weight: 500;
     font-size: 24px;
     line-height: 142.6%;
-
     /* or 34px */
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     color: #FFFFFF;
     padding-left: 2%;
     padding-right: 2%;
-
     border: #000000 solid 1px;
-    margin-top: 2%;
-
+    
 }
 
 .Content {
 
     margin-left: 5%;
     margin-right: 5%;
-    display: flex;
+        display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
-
+    
 }
 
 .c-element {
@@ -453,12 +541,10 @@ main {
 
 .carrousel-wrap {
 
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-
     margin-left: 5%;
     margin-right: 5%;
 }

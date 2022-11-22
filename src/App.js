@@ -5,20 +5,45 @@ import Home from "./pages/Home";
 import APropos from "./pages/A-Propos";
 import Err404 from "./pages/Err404";
 import Fiche from "./pages/Fiche"
-import Composant from "./pages/Composant"
+
 
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/A Propos" element={<APropos />} />
-        <Route path="/Fiche" element={<Fiche />} />
-        <Route path="/Composant" element={<Composant />} />
+        <Route path="/apropos" element={<APropos />} />
+
+
+        <Route path="Fiche">
+<Route index element={<Fiche />} />
+<Route path=":id" element={<Fiche />} />
+</Route>
+       
+
+
+
+
+
+
         <Route path="/*" element={<Err404 />} />
       </Routes>
+
+
+
+
     </div>
   );
 }
 
 export default App;
+
+
+
+/*https://stackoverflow.com/questions/46160461/how-do-you-set-the-document-title-in-react*/
+/*&and;
+      &or;
+
+      &#9734; &#9733;
+
+*/

@@ -19,9 +19,9 @@ function Gallery() {
         <div className="card">
           <ul className="card-ul">
             <li>
-              <Link to={"/Fiche"}>Fiche logement</Link>
+              <Link to={"/fiche"}>Fiche logement</Link>
               </li>
-            <li><Link to={"/Composant"}>composant desktop</Link>
+            <li><Link to={"/fiche"}>composant desktop</Link>
             </li>
           </ul>
         </div>

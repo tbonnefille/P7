@@ -3,12 +3,12 @@ import "../style.css";
 import Logo from "../images/LOGO.svg";
 import { Link } from "react-router-dom";
 
-function Header() {
+function HeaderH() {
   return (
     <header className="header">
       <div className="nav">
         <ul id="navUl">
-          <li className="li">
+          <li id="locationHome" className="li">
             <Link to={"/"}>Accueil</Link>
           </li>
           <li className="li">
@@ -26,4 +26,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderH;

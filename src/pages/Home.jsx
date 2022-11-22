@@ -1,17 +1,19 @@
 import React from "react";
 
-import Header from "../components/Header";
+import HeaderH from "../components/HeaderH";
 import Banner from "../components/Banner";
-import Gallery from "../components/Gallery";
+import Test from "../components/Test";
+
 import Footer from "../components/Footer";
 
 
 export default function Home() {
   return (
     <div>
-      <Header />,
+      <HeaderH />,
       <Banner />,
-      <Gallery />,
+      <Test />,
+      
       <Footer />
     </div>
   );

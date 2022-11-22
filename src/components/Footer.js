@@ -7,7 +7,7 @@ function Footer() {
     <footer id="footer">
       <div id="footer-wrap">
         <div id="logo_footer">
-          <img src={FooterLogo} alt="" />
+          <img src={FooterLogo} alt="logo footer" />
         </div>
         <p>© 2020 Kasa. All rights reserved</p>
       </div>

@@ -2,7 +2,35 @@ import React from "react";
 import "../style.css";
 import Vector from "../images/Vector.png";
 
+import Datas from "../data/logements.json";
+
+import { useParams} from 'react-router-dom';
+
+
+
+
+
+
+
 function Content() {
+
+
+
+/* Récupère la bonne fiche */
+const id = useParams();
+const ficheLogement = Datas.find(logement => logement.id === id.id);
+
+
+/* Équipements */
+const equipementsLogement = ficheLogement.equipments.map((equipment, index) => {
+  return <li key={index}>{equipment}</li>
+})
+
+
+
+
+
+
   return (
     <section className="Content">
       <div className="c-element">
@@ -13,11 +41,7 @@ function Content() {
           </div>
           <div className="ddp">
             <p>
-              Vous serez à 50m du canal Saint-martin où vous pourrez
-              pique-niquer l'été et à côté de nombreux bars et restaurants. Au
-              cœur de Paris avec 5 lignes de métro et de nombreux bus. Logement
-              parfait pour les voyageurs en solo et les voyageurs d'affaires.
-              Vous êtes à1 station de la gare de l'est (7 minutes à pied).
+              {ficheLogement.description}
             </p>
           </div>
         </div>
@@ -32,14 +56,8 @@ function Content() {
 
           <div className="ddp">
             <ul>
-              <li>Climatisation</li>
-              <li>Wi-Fi</li>
-              <li>Cuisine</li>
-              <li>Espace de travail</li>
-              <li>Fer à repasser</li>
-              <li>Sèche-cheveux</li>
-              <li>Cintres</li>
-            </ul>
+          {equipementsLogement}
+          </ul>
           </div>
         </div>
       </div>

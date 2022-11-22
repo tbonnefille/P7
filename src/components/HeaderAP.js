@@ -3,7 +3,7 @@ import "../style.css";
 import Logo from "../images/LOGO.svg";
 import { Link } from "react-router-dom";
 
-function Header() {
+function HeaderAP() {
   return (
     <header className="header">
       <div className="nav">
@@ -11,7 +11,7 @@ function Header() {
           <li className="li">
             <Link to={"/"}>Accueil</Link>
           </li>
-          <li className="li">
+          <li id="locationAP" className="li">
             <Link to={"/apropos"}>A propos</Link>
           </li>
         </ul>
@@ -26,4 +26,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderAP;
