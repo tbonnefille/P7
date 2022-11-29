@@ -2,18 +2,15 @@ import React from "react";
 
 import HeaderH from "../components/HeaderH";
 import Banner from "../components/Banner";
-import Test from "../components/Test";
-
+import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
-
 
 export default function Home() {
   return (
     <div>
       <HeaderH />,
       <Banner />,
-      <Test />,
-      
+      <Gallery />,
       <Footer />
     </div>
   );

@@ -105,7 +105,7 @@ main {
     margin-left: 5%;
     margin-right: 5%;
     border-radius: 25px;
-       color: #FF6060;
+    color: #FF6060;
 
 }
 
@@ -181,7 +181,7 @@ main {
     border-radius: 25px;
     margin-bottom: 5%;
     padding: 4%;
-        background-color: #F7F7F7;
+    background-color: #F7F7F7;
 
 }
 
@@ -198,8 +198,8 @@ main {
     margin-bottom: 5%;
     padding: 4%;
     background-color: #F7F7F7;
-        margin-left: 5%;
-        margin-right: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
 
 }
 
@@ -210,7 +210,7 @@ main {
 
 
 
-.card {
+.cardHolder {
 
     height: 340px;
     width: 30%;
@@ -218,19 +218,14 @@ main {
     display: flex;
     align-items: flex-end;
     color: white;
-    padding-left: 1%;
-    background-color: #FF6060;
+
+
     margin-bottom: 4%;
-    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);*/
+
 
 }
 
-.card-p {
 
-    width: 100%;
-    margin-top: 2%;
-
-}
 
 .cardText {
 
@@ -241,66 +236,49 @@ main {
     margin-bottom: 5%;
 }
 
-.card-ul {
 
-    padding-left: 0%;
 
-}
-
-.card-ul a {
-
-    color: blue;
-}
-
-.testcard {
+.card {
 
     height: 340px;
     width: 100%;
     border-radius: 10px;
-    
+
     color: white;
-   
-    background-color: #FF6060;
-    margin-bottom: 4%;
+
+    position: relative;
+
+
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
 
-    
 
+/*
+background-image: url('../images/sidebar_angle.png'), 
+                      -moz-linear-gradient(top, #ADB2B6 0%, #ABAEB3 100%);
 
+                      */
 
 }
 
 .img {
     width: 100%;
-    height: 80%;
+    height: 100%;
     border-radius: 10px;
 
     object-fit: cover;
 
     background-color: cadetblue;
+
+
 }
 
 
-.testcard a {
+.cardTitle {
 
-    color: black;
+    padding-left: 5%;
+    position: absolute;
+    top: 80%;
 }
-
-
-.xxx {
-
-
-    width: 30%;
-    color: purple;
-    
-    
-}
-
-#aaa {
-
-    color: red;
-}
-
 
 /* 404*/
 
@@ -349,11 +327,61 @@ main {
 
 /*DROPDOWN A PROPOS*/
 
+
+#about {
+
+    display: flex;
+    justify-content: center;
+}
+
+
 .ddl-wrap {
 
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 80%;
+    
+
+}
+
+.toggle {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.arrowDown {
+
+    visibility: visible;
+    position: absolute;
+    display: block;
+
+
+
+}
+
+.active .arrowDown {
+
+    visibility: hidden;
+}
+
+
+
+
+.arrowUp {
+
+    visibility: hidden;
+}
+
+.active .arrowUp {
+
+    visibility: visible;
+    
+
 
 }
 
@@ -361,7 +389,9 @@ main {
 
     margin-top: 2%;
     margin-bottom: 2%;
-    width: 80%;
+    width: 100%;
+    position: relative;
+    
 }
 
 .dropdownlarge-close-shape {
@@ -369,6 +399,7 @@ main {
     background: #FF6060;
     border-radius: 5px;
     height: 47px;
+    width: 100%;
     font-weight: 500;
     font-size: 24px;
     line-height: 142.6%;
@@ -379,7 +410,10 @@ main {
     color: #FFFFFF;
     padding-left: 2%;
     padding-right: 2%;
-    border: #000000 solid 1px;
+    position: relative;
+    bottom: -4px;
+
+ 
 
 }
 
@@ -387,7 +421,7 @@ main {
 
     margin-top: 2%;
     margin-bottom: 2%;
-    width: 80%;
+   
 
 }
 
@@ -397,15 +431,27 @@ main {
     /* background: #F7F7F7;*/
     background-color: #E5E5E5;
     border-radius: 5px;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 2%;
-    padding-right: 2%;
-    top: -5px;
-    position: relative;
+    padding: 2%;
+    
+
+    width: 100%;
+
+
+    visibility: hidden;
+
+
+
 }
 
-.Miguel {
+
+.active .ddp {
+    visibility: visible;
+       
+   
+  }
+
+
+#Miguel {
 
     width: 100px;
     font-family: 'Montserrat';
@@ -419,11 +465,100 @@ main {
     justify-content: center;
     color: #FFFFFF;
     background-color: coral;
+    margin-left: 15%;
 
 }
 
 
 /*FICHE LOGEMENT*/
+
+
+
+
+/* CARROUSEL */
+
+
+.carrousel {
+    
+    height: 415px;
+    margin: auto auto 30px auto;
+    position: relative;
+    width: 90%;
+}
+
+.fleche {
+    position: absolute;
+    width: 45px;
+    z-index: 1;
+}
+.fleche:hover {
+    cursor: pointer;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.fleche-gauche {
+    margin-left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.fleche-droite {
+    margin-right: 25px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carrousel-img {
+    border-radius: 15px;
+    height: 415px;
+    object-fit: cover;
+    display: none;
+    width: 100%
+}
+.carrousel-img.actif {
+    display: block;
+}
+
+
+@media screen and (max-width: 1490px) {
+    .carrousel {
+        height: 255px;
+        margin: auto auto 15px auto;
+    }
+
+    .fleche {
+        width: 15px;
+    }
+    
+    .fleche-gauche {
+        margin-left: 5px;
+    }
+    .fleche-droite {
+        margin-right: 5px;
+    }
+
+    .carrousel-img {
+        height: 255px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CARROUSEL FIN*/
+
+
 
 #wrapper {
 
@@ -434,7 +569,7 @@ main {
     margin-left: 5%;
     margin-right: 5%;
     color: #FF6060;
-   
+
 }
 
 #host-rating {
@@ -443,7 +578,7 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
-    
+
 }
 
 #rating {
@@ -499,18 +634,18 @@ main {
     padding-left: 2%;
     padding-right: 2%;
     border: #000000 solid 1px;
-    
+
 }
 
 .Content {
 
     margin-left: 5%;
     margin-right: 5%;
-        display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
-    
+
 }
 
 .c-element {
@@ -523,12 +658,15 @@ main {
     background: #FF6060;
     border-radius: 10px;
     height: 25px;
-    width: 115px;
+  /*  width: 115px;*/
     color: #FFFFFF;
+    font-size: 14px;
     margin-right: 1%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 #tag-wrap {
@@ -583,68 +721,6 @@ main {
 }
 
 
-/*COMPOSANT DESKTOP*/
-
-#groupe_2 {
-
-    color: #666666;
-    font-size: 14px;
-    margin-left: 5%;
-}
-
-#thumb {
-
-    margin-left: 5%;
-
-}
-
-.rectangle_2 {
-
-    height: 340px;
-    width: 340px;
-    border-radius: 10px;
-    background-color: #FF6060;
-    color: #F7F7F7;
-    margin-bottom: 2%;
-    display: flex;
-    align-items: flex-end;
-}
-
-#contentDDL {
-
-    margin-left: 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    width: 75%;
-
-}
-
-#compDDL {
-
-    margin-left: 5%;
-    width: 80%;
-
-}
-
-#carrouselComp-wrap {
-
-    width: 75%;
-    margin-left: 5%;
-}
-
-#petitCarrousel {
-
-    width: 335px;
-    height: 255px;
-    border-radius: 10px;
-    background: url(./images/Background.jpg);
-    background-size: cover;
-    background-position: center center;
-    margin-left: 5%;
-    margin-bottom: 3%;
-}
 
 
 /*FOOTER*/
@@ -685,7 +761,7 @@ main {
 
 @media all and (min-width:769px) and (max-width:992px) {
 
-    .card {
+    .cardHolder {
 
         width: 46%;
 
@@ -767,12 +843,12 @@ main {
 
     }
 
-    #gallery {
+    .gallery {
 
         margin-top: 4%;
     }
 
-    .card {
+    .cardHolder {
 
         width: 98%;
         margin-bottom: 2%;
