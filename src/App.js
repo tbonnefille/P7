@@ -20,11 +20,3 @@ function App() {
 }
 
 export default App;
-
-/*https://stackoverflow.com/questions/46160461/how-do-you-set-the-document-title-in-react*/
-/*&and;
-      &or;
-
-      &#9734; &#9733;
-
-*/

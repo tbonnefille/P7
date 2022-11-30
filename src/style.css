@@ -109,6 +109,8 @@ main {
 
 }
 
+/*------------------------------------------------------------- HOME --------------------------------------------------------*/
+
 .section_1 {
 
     margin-bottom: 4%;
@@ -119,74 +121,21 @@ main {
 
 .banner {
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 142.6%;
-    border-radius: 25px;
-    width: 100%;
     height: 223px;
-    background-image: url(./images/IMG.jpg);
-    background-size: cover;
-    background-position: center center;
+    border-radius: 25px;
 
 }
 
-.bannerAP {
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 142.6%;
-    border-radius: 25px;
-    width: 100%;
-    height: 223px;
-    background-image: url(./images/kalen-emsley-Bkci_8qcdvQ-unsplash\ 2.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+.bannerTxt {
 
-}
-
-.banner_txt {
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 25px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
     line-height: 142.6%;
-    color: #FFFFFF;
-    background-color: rgba(0, 0, 0, 0.25);
-    height: 100%;
-    width: 100%;
 
 }
-
-#gallery {
-
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-radius: 25px;
-    margin-bottom: 5%;
-    padding: 4%;
-    background-color: #F7F7F7;
-
-}
-
-
-
 
 .gallery {
 
@@ -203,13 +152,6 @@ main {
 
 }
 
-
-
-
-
-
-
-
 .cardHolder {
 
     height: 340px;
@@ -218,69 +160,20 @@ main {
     display: flex;
     align-items: flex-end;
     color: white;
-
-
     margin-bottom: 4%;
 
-
 }
-
-
-
-.cardText {
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 95%;
-    margin-bottom: 5%;
-}
-
-
-
-.card {
-
-    height: 340px;
-    width: 100%;
-    border-radius: 10px;
-
-    color: white;
-
-    position: relative;
-
-
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-
-
-/*
-background-image: url('../images/sidebar_angle.png'), 
-                      -moz-linear-gradient(top, #ADB2B6 0%, #ABAEB3 100%);
-
-                      */
-
-}
-
-.img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-
-    object-fit: cover;
-
-    background-color: cadetblue;
-
-
-}
-
 
 .cardTitle {
 
     padding-left: 5%;
-    position: absolute;
-    top: 80%;
+    margin-bottom: 5%;
+    width: 55%;
+
 }
 
-/* 404*/
+
+/*------------------------------------------------------------------- 404------------------------------------------------------*/
 
 #wrap_404 {
 
@@ -325,7 +218,7 @@ background-image: url('../images/sidebar_angle.png'),
 }
 
 
-/*DROPDOWN A PROPOS*/
+/* -----------------------------------------------------------A PROPOS ----------------------------------------------------*/
 
 
 #about {
@@ -335,13 +228,13 @@ background-image: url('../images/sidebar_angle.png'),
 }
 
 
-.ddl-wrap {
+.collapse-wrap {
 
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width: 80%;
-    
+
 
 }
 
@@ -351,6 +244,8 @@ background-image: url('../images/sidebar_angle.png'),
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding-right: 2%;
 }
 
 
@@ -360,17 +255,12 @@ background-image: url('../images/sidebar_angle.png'),
     position: absolute;
     display: block;
 
-
-
 }
 
 .active .arrowDown {
 
     visibility: hidden;
 }
-
-
-
 
 .arrowUp {
 
@@ -380,21 +270,11 @@ background-image: url('../images/sidebar_angle.png'),
 .active .arrowUp {
 
     visibility: visible;
-    
-
 
 }
 
-.dropdownlarge-close {
 
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: 100%;
-    position: relative;
-    
-}
-
-.dropdownlarge-close-shape {
+.dropdownlarge-shape {
 
     background: #FF6060;
     border-radius: 5px;
@@ -408,22 +288,31 @@ background-image: url('../images/sidebar_angle.png'),
     align-items: center;
     justify-content: space-between;
     color: #FFFFFF;
-    padding-left: 2%;
-    padding-right: 2%;
+
+
     position: relative;
     bottom: -4px;
 
- 
 
 }
 
 .dropdownlarge {
 
-    margin-top: 2%;
-    margin-bottom: 2%;
-   
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+    width: 100%;
+
 
 }
+
+
+.collapseTitre {
+
+    padding-left: 2%;
+}
+
+
 
 .ddp {
 
@@ -432,23 +321,24 @@ background-image: url('../images/sidebar_angle.png'),
     background-color: #E5E5E5;
     border-radius: 5px;
     padding: 2%;
-    
-
-    width: 100%;
-
 
     visibility: hidden;
 
-
+    /*
+display: none;
+*/
 
 }
 
 
 .active .ddp {
+
     visibility: visible;
-       
-   
-  }
+
+    /*
+    display: contents;
+*/
+}
 
 
 #Miguel {
@@ -470,94 +360,70 @@ background-image: url('../images/sidebar_angle.png'),
 }
 
 
-/*FICHE LOGEMENT*/
+
+/* -----------------------------------------------------------FICHE LOGEMENT--------------------------------------------------- */
 
 
 
+/* --------------------------------------------------------------CARROUSEL----------------------------------------------------- */
 
-/* CARROUSEL */
+
+.carrousel-wrap {
+
+    display: flex;
+    justify-content: center;
+
+}
 
 
 .carrousel {
-    
-    height: 415px;
-    margin: auto auto 30px auto;
+
     position: relative;
     width: 90%;
+    height: 415px;
 }
 
-.fleche {
+.arrow {
     position: absolute;
     width: 45px;
     z-index: 1;
 }
-.fleche:hover {
+
+.arrow:hover {
     cursor: pointer;
     filter: drop-shadow(2px 4px 6px black);
 }
 
-.fleche-gauche {
+.vectorL {
     margin-left: 25px;
     top: 50%;
     transform: translateY(-50%);
 }
-.fleche-droite {
+
+.vectorR {
     margin-right: 25px;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.carrousel-img {
+
+.carrouselImg {
     border-radius: 15px;
     height: 415px;
     object-fit: cover;
     display: none;
     width: 100%
 }
-.carrousel-img.actif {
+
+.carrouselImg.actif {
     display: block;
-}
-
-
-@media screen and (max-width: 1490px) {
-    .carrousel {
-        height: 255px;
-        margin: auto auto 15px auto;
-    }
-
-    .fleche {
-        width: 15px;
-    }
-    
-    .fleche-gauche {
-        margin-left: 5px;
-    }
-    .fleche-droite {
-        margin-right: 5px;
-    }
-
-    .carrousel-img {
-        height: 255px;
-    }
+    height: 415px;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*CARROUSEL FIN*/
-
+/*--------------------------------------------------------CARROUSEL FIN-------------------------------------------------------*/
 
 
 #wrapper {
@@ -565,7 +431,6 @@ background-image: url('../images/sidebar_angle.png'),
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 1%;
     margin-left: 5%;
     margin-right: 5%;
     color: #FF6060;
@@ -637,14 +502,14 @@ background-image: url('../images/sidebar_angle.png'),
 
 }
 
-.Content {
+.content {
 
     margin-left: 5%;
     margin-right: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
 }
 
@@ -658,15 +523,15 @@ background-image: url('../images/sidebar_angle.png'),
     background: #FF6060;
     border-radius: 10px;
     height: 25px;
-  /*  width: 115px;*/
+    /*  width: 115px;*/
     color: #FFFFFF;
     font-size: 14px;
     margin-right: 1%;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 0.1%;
+    padding-right: 0.1%;
 }
 
 #tag-wrap {
@@ -674,56 +539,12 @@ background-image: url('../images/sidebar_angle.png'),
     display: flex;
     flex-direction: row;
     text-align: center;
-
-}
-
-.carrousel-wrap {
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.carrouselMockup {
-
-    display: flex;
-    align-items: center;
-    border-radius: 25px;
-    border: #000000 solid 1px;
     width: 100%;
-    height: 415px;
-    margin-bottom: 1.5%;
-    background: url(./images/Background.jpg);
-
-}
-
-.vectorBox {
-
-    display: flex;
-    justify-content: space-between;
-    z-index: 1;
-    width: 100%;
-
-}
-
-.vectorLeft {
-
-    padding-left: 1%;
-
-}
-
-.vectorRight {
-
-    padding-right: 1%;
+ 
 }
 
 
-
-
-/*FOOTER*/
+/*-----------------------------------------------------------FOOTER------------------------------------------------------------*/
 
 #footer {
 
@@ -755,16 +576,15 @@ background-image: url('../images/sidebar_angle.png'),
 }
 
 
-/*MEDIA QUERIES*/
+/*--------------------------------------------------------------MEDIA QUERIES------------------------------------------------*/
 
-/*TABLETS*/
+/*--------------------------------------------------------TABLETS------------------------------------------------------------*/
 
 @media all and (min-width:769px) and (max-width:992px) {
 
     .cardHolder {
 
         width: 46%;
-
     }
 
     #navUl {
@@ -772,12 +592,19 @@ background-image: url('../images/sidebar_angle.png'),
         font-size: 18px;
     }
 
-    .banner_txt {
+    .banner {
 
-        font-size: 36px;
-
+        height: 167px;
+        border-radius: 17.5px;
     }
 
+    .bannerTxt {
+
+        font-size: 36px;
+        padding-left: 5%;
+        padding-right: 5%;
+
+    }
 
     .dropdownlarge-close {
 
@@ -786,13 +613,39 @@ background-image: url('../images/sidebar_angle.png'),
         width: 100%;
     }
 
-
     .dropdownlarge {
-
 
         margin-top: 2%;
         margin-bottom: 2%;
         width: 100%;
+
+    }
+
+    .carrousel {
+
+        height: 335px;
+        margin: auto auto 30px auto;
+        position: relative;
+        width: 90%;
+    }
+
+    .carrouselImg {
+        border-radius: 15px;
+        height: 335px;
+        object-fit: cover;
+        display: none;
+        width: 100%
+    }
+
+    .carrouselImg.actif {
+        display: block;
+        height: 335px;
+    }
+
+
+    #rating {
+
+        font-size: 28px;
 
     }
 
@@ -819,7 +672,7 @@ background-image: url('../images/sidebar_angle.png'),
 
 
 
-/*MOBILES*/
+/*----------------------------------------------------------MOBILES--------------------------------------------------------*/
 
 @media all and (max-width: 768px) {
 
@@ -834,12 +687,20 @@ background-image: url('../images/sidebar_angle.png'),
 
     }
 
-    .banner_txt {
+    .banner {
+
+        height: 111px;
+        border-radius: 10px;
+    }
+
+
+
+    .bannerTxt {
 
         font-size: 24px;
         line-height: 100%;
         padding-left: 5%;
-
+        padding-right: 5%;
 
     }
 
@@ -902,10 +763,111 @@ background-image: url('../images/sidebar_angle.png'),
         flex-wrap: wrap;
     }
 
-    .dd2-element {
+    .c-element {
 
         width: 100%;
     }
+
+
+    .carrousel {
+
+        height: 255px;
+
+        position: relative;
+        width: 90%;
+    }
+
+
+    .carrouselImg {
+        border-radius: 15px;
+        height: 255px;
+        object-fit: cover;
+        display: none;
+        width: 100%
+    }
+
+    .carrouselImg.actif {
+        display: block;
+        height: 255px;
+    }
+
+    #wrapper {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        margin-left: 5%;
+        margin-right: 5%;
+        color: #FF6060;
+        flex-wrap: wrap;
+
+    }
+
+    #title-tag {
+
+
+        width: 100%;
+    }
+
+    #host-rating {
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 2%;
+
+    }
+
+    #rating {
+
+        display: flex;
+        align-items: center;
+        font-size: 28px;
+
+    }
+
+    #host {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+    }
+
+    #circle {
+
+        background-color: #C4C4C4;
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+
+    }
+
+    .imgPortrait {
+
+        border-radius: 50%;
+        object-fit: cover;
+        height: 32px;
+        width: 32px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

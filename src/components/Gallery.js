@@ -1,13 +1,13 @@
 import React from "react";
 import "../style.css";
 
-import Datas from "../data/logements.json";
+import Data from "../data/logements.json";
 import { NavLink } from "react-router-dom";
 
-function Test() {
+function Gallery() {
   return (
     <div className="gallery">
-      {Datas.map(logement => (
+      {Data.map(logement => (
         <NavLink
           className="cardHolder"
           key={logement.id}
@@ -28,7 +28,7 @@ function Test() {
               marginBottom: "4%"
             }}
           >
-            <p className="cardTitle">{logement.title}</p>
+            <div className="cardTitle">{logement.title}</div>
           </div>
         </NavLink>
       ))}
@@ -36,4 +36,4 @@ function Test() {
   );
 }
 
-export default Test;
+export default Gallery;

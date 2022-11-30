@@ -5,16 +5,10 @@ import Wrapper from "../components/Wrapper";
 import Content from "../components/Content";
 import Footer from "../components/Footer";
 
-
 export default function Fiche() {
-
-
   return (
     <div>
       <Header />,
-
-     
-
       <Carrousel />,
       <Wrapper />,
       <Content />,

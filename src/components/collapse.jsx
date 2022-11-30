@@ -1,9 +1,10 @@
 import React from "react";
+import { useState } from "react";
 
 import ArrowBack from "../images/arrow_back_ios-24px 2.png";
 import ArrowNext from "../images/Vector.png";
 
-import { useState } from "react";
+
 
 function Collapse(props) {
   const [active, setActive] = useState(false);
@@ -13,9 +14,9 @@ function Collapse(props) {
 
   return (
     <div className={`accordion ${active && "active"}`}>
-      <div className="dropdownlarge-close">
-        <div className="dropdownlarge-close-shape">
-          <p>{props.titre}</p>
+      <div className="dropdownlarge">
+        <div className="dropdownlarge-shape">
+          <p className="collapseTitre">{props.titre}</p>
 
           <div className="toggle" onClick={handleToggle}>
             <img

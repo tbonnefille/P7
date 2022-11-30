@@ -1,13 +1,13 @@
 import React from "react";
 import "../style.css";
 
-import Collapse from "./collapse";
+import Collapse from "./Collapse";
 
-function A_Propos() {
+function About() {
   return (
     <main>
       <div id="about">
-        <div className="ddl-wrap">
+        <div className="collapse-wrap">
           <Collapse
             titre="Fiabilité"
             texte="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes. "
@@ -37,4 +37,4 @@ function A_Propos() {
   );
 }
 
-export default A_Propos;
+export default About;

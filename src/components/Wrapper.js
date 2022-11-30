@@ -1,15 +1,14 @@
 import React from "react";
 import "../style.css";
 import Rater from "./Rater";
-import Datas from "../data/logements.json";
+import Data from "../data/logements.json";
 
 import { useParams } from "react-router-dom";
 
 function Wrapper() {
   /* Récupère la bonne fiche */
   const id = useParams();
-  const ficheLogement = Datas.find(logement => logement.id === id.id);
-
+  const ficheLogement = Data.find(logement => logement.id === id.id);
 
   /* Tags */
   const tagsLogement = ficheLogement.tags.map((tags, index) => {
@@ -20,11 +19,6 @@ function Wrapper() {
       </div>
     );
   });
-
-  
-
-
-  
 
   return (
     <section id="wrapper">
@@ -50,11 +44,8 @@ function Wrapper() {
         </div>
 
         <div id="rating">
-               
-        <Rater rating={ficheLogement.rating} />
-
+          <Rater rating={ficheLogement.rating} />
         </div>
-
       </div>
     </section>
   );

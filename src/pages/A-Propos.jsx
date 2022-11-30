@@ -2,7 +2,7 @@ import React from "react";
 
 import HeaderAP from "../components/HeaderAP";
 import BannerAP from "../components/BannerAP";
-import Apropos from "../components/APropos";
+import About from "../components/About";
 import Footer from "../components/Footer";
 
 export default function APropos() {
@@ -10,7 +10,7 @@ export default function APropos() {
     <div>
       <HeaderAP />,
       <BannerAP />,
-      <Apropos />,
+      <About />,
       <Footer />
     </div>
   );

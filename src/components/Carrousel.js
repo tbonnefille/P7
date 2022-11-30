@@ -1,67 +1,74 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 import "../style.css";
 
 import VectorL from "../images/VectorBigLeft.png";
 import VectorR from "../images/VectorBigRight.png";
 
-
-import Datas from "../data/logements.json";
+import Data from "../data/logements.json";
 import { useParams } from "react-router-dom";
 
 
 
-
-/* ATTENTION: images= prop => data.object.pictures */
 function Carrousel() {
 
 
  /* Récupère la bonne fiche */
  const id = useParams();
- const ficheLogement = Datas.find(logement => logement.id === id.id);
+ const ficheLogement = Data.find(logement => logement.id === id.id);
 
 
-const images= ficheLogement.pictures
+const diapos= ficheLogement.pictures
 
 
 
     /* Crée un Hook d'état */
-    let [imgAfficher, changerImg] = useState(0);
-    let nombreImg = images.length;
+    const [currentSlide, changeImg] = useState(0);
+    let imgNumber = diapos.length;
 
-    const imgPrecedente = () => {
-        if(imgAfficher === 0) {
-            changerImg(nombreImg - 1);
+    const previousSlide = () => {
+        if(currentSlide === 0) {
+            changeImg(imgNumber - 1);
         } else {
-            changerImg(imgAfficher - 1);
+            changeImg(currentSlide - 1);
         }
-        return(changerImg);
+        return(changeImg);
     };  
 
-    const imgSuivante = () => {
-        if(imgAfficher === nombreImg - 1) {
-            changerImg(nombreImg = 0);
+    const nextSlide = () => {
+        if(currentSlide === imgNumber - 1) {
+            changeImg(imgNumber = 0);
         } else {
-            changerImg(imgAfficher + 1);
+            changeImg(currentSlide + 1);
         }
-        return(changerImg);
+        return(changeImg);
     };
 
     return(
+
+<div className="carrousel-wrap">
+
         <div className="carrousel">
             {
-                nombreImg > 1 && <img className="fleche fleche-gauche" src={VectorL} alt="Contenu précedént" onClick={imgPrecedente}/>
+                imgNumber > 1 && <img className="arrow vectorL" src={VectorL} alt="diapo précedénte" onClick={previousSlide}/>
             }
             {
-                images.map((image, index) => {
+                diapos.map((diapo, index) => {
                     return(
-                        <img key={index} className={index === imgAfficher ? 'carrousel-img actif' : 'carrousel-img'} src={image} alt="Logement"/>
+                        
+                        <img key={index} className={index === currentSlide ? 'carrouselImg actif' : 'carrouselImg'} src={diapo} alt="Logement"/>
+                   
                     )
                 })
             }
             {
-                nombreImg > 1 && <img className="fleche fleche-droite" src={VectorR} alt="Contenu suivant" onClick={imgSuivante}/>
+                imgNumber > 1 && <img className="arrow vectorR" src={VectorR} alt="diapo suivante" onClick={nextSlide}/>
             }
         </div>
+
+
+        </div>
+
     );
 }
 
