@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import "../style.css";
+
+import "../styles/style.css";
 
 import VectorL from "../images/VectorBigLeft.png";
 import VectorR from "../images/VectorBigRight.png";

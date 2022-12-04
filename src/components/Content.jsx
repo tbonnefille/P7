@@ -1,6 +1,7 @@
 import React from "react";
+/*
 import "../style.css";
-
+*/
 import Data from "../data/logements.json";
 import { useParams } from "react-router-dom";
 
@@ -12,20 +13,18 @@ function Content() {
   const ficheLogement = Data.find(logement => logement.id === id.id);
 
   /* Équipements */
-  const equipements = ficheLogement.equipments.map(
-    (equipment, index) => {
-      return <li key={index}>{equipment}</li>;
-    }
-  );
+  const equipements = ficheLogement.equipments.map((equipment, index) => {
+    return <li key={index}>{equipment}</li>;
+  });
 
   return (
     <section className="content">
       <div className="c-element">
-        <Collapse titre="Description" texte={ficheLogement.description} />
+        <Collapse titre="Description">{ficheLogement.description}</Collapse>
       </div>
 
       <div className="c-element">
-        <Collapse titre="Équipements" texte={<ul>{equipements}</ul>} />
+        <Collapse titre="Équipements">{<ul>{equipements}</ul>}</Collapse>
       </div>
     </section>
   );

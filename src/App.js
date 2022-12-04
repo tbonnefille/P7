@@ -1,5 +1,8 @@
 import React from "react";
-import "./App.css";
+import "./styles/App.css";
+import "./styles/normalize.css";
+import "./styles/style.css";
+
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import APropos from "./pages/A-Propos";

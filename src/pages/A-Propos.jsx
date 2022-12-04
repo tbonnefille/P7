@@ -1,6 +1,6 @@
 import React from "react";
 
-import HeaderAP from "../components/HeaderAP";
+import Header from "../components/Header";
 import BannerAP from "../components/BannerAP";
 import About from "../components/About";
 import Footer from "../components/Footer";
@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 export default function APropos() {
   return (
     <div>
-      <HeaderAP />,
+      <Header />,
       <BannerAP />,
       <About />,
       <Footer />

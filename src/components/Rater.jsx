@@ -1,4 +1,14 @@
 import React from "react";
+import Styled from "styled-components";
+
+const StyledRater = Styled.div`
+    font-size: 42px;
+    color: blue;
+    @media (max-width: 768px) {
+        font-size: 24px;
+        color: green;
+    }
+`;
 
 function Rater(props) {
     const rating = props.rating;
@@ -13,10 +23,16 @@ function Rater(props) {
     }
     
     return (
-        <div>
+        <StyledRater>
             {items}
-        </div>
+        </StyledRater>
     );
 }
 
 export default Rater;
+
+
+
+
+
+/*styled components*/

@@ -1,14 +1,15 @@
 import React from "react";
+/*
 import "../style.css";
-
+*/
 import Data from "../data/logements.json";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Gallery() {
   return (
     <div className="gallery">
       {Data.map(logement => (
-        <NavLink
+        <Link
           className="cardHolder"
           key={logement.id}
           to={"/Fiche/" + logement.id + "/#"}
@@ -30,7 +31,7 @@ function Gallery() {
           >
             <div className="cardTitle">{logement.title}</div>
           </div>
-        </NavLink>
+        </Link>
       ))}
     </div>
   );

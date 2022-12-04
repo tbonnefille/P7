@@ -32,7 +32,7 @@ function Collapse(props) {
           </div>
         </div>
         <div className="ddp">
-          {props.texte}
+          {props.children}
         </div>
       </div>
     </div>

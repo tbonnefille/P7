@@ -1,8 +1,3 @@
-/* @font-face {
-    font-family: "Montserrat";
-    src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
-} */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
 
@@ -79,19 +74,6 @@ body {
 
 }
 
-#locationHome {
-
-    text-decoration-line: underline;
-    color: #FF6060;
-}
-
-#locationAP {
-
-    text-decoration-line: underline;
-    color: #FF6060;
-}
-
-
 
 .li:hover {
 
@@ -136,6 +118,23 @@ main {
     line-height: 142.6%;
 
 }
+
+.bannerAP {
+
+    height: 223px;
+    border-radius: 25px;
+
+    background: url("../images/kalen_emsley_Bkci_8qcdvQ_unsplash_2.jpg"), linear-gradient(240deg, rgba(255, 255, 255, 0.0) 0%, rgba(0, 0, 0, 0.7) 100%);
+
+
+
+    background-size: cover;
+    background-position: center center;
+
+
+}
+
+
 
 .gallery {
 
@@ -288,8 +287,6 @@ main {
     align-items: center;
     justify-content: space-between;
     color: #FFFFFF;
-
-
     position: relative;
     bottom: -4px;
 
@@ -300,7 +297,6 @@ main {
 
     margin-top: 1%;
     margin-bottom: 1%;
-
     width: 100%;
 
 
@@ -312,7 +308,10 @@ main {
     padding-left: 2%;
 }
 
+.accordion {
 
+    width: 100%;
+}
 
 .ddp {
 
@@ -321,23 +320,16 @@ main {
     background-color: #E5E5E5;
     border-radius: 5px;
     padding: 2%;
+    display: none;
 
-    visibility: hidden;
-
-    /*
-display: none;
-*/
 
 }
 
 
 .active .ddp {
 
-    visibility: visible;
+    display: flex;
 
-    /*
-    display: contents;
-*/
 }
 
 
@@ -354,7 +346,7 @@ display: none;
     align-items: center;
     justify-content: center;
     color: #FFFFFF;
-    background-color: coral;
+    background-color: #FFFFFF;
     margin-left: 15%;
 
 }
@@ -443,12 +435,7 @@ display: none;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
-
-}
-
-#rating {
-
-    font-size: 42px;
+    width: 25%;
 
 }
 
@@ -498,24 +485,22 @@ display: none;
     color: #FFFFFF;
     padding-left: 2%;
     padding-right: 2%;
-    border: #000000 solid 1px;
 
 }
 
-.content {
 
-    margin-left: 5%;
-    margin-right: 5%;
+#title-tag {
+
+    width: 75%;
+}
+
+#tag-wrap {
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    text-align: center;
+    width: 100%;
 
-}
-
-.c-element {
-
-    width: 48%;
 }
 
 .tag {
@@ -530,18 +515,28 @@ display: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 0.1%;
-    padding-right: 0.1%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
-#tag-wrap {
+.content {
 
+    margin-left: 5%;
+    margin-right: 5%;
     display: flex;
     flex-direction: row;
-    text-align: center;
-    width: 100%;
- 
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+
 }
+
+.c-element {
+
+    width: 48%;
+}
+
+
 
 
 /*-----------------------------------------------------------FOOTER------------------------------------------------------------*/
@@ -693,7 +688,14 @@ display: none;
         border-radius: 10px;
     }
 
+    .bannerAP {
 
+        height: 223px;
+        border-radius: 10px;
+        background: url("../images/gustavo-alves-YOXSC4zRcxw-unsplash-1.jpg"), linear-gradient(240deg, rgba(255, 255, 255, 0.0) 0%, rgba(0, 0, 0, 0.7) 100%);
+        background-size: cover;
+        background-position: center 90%;
+    }
 
     .bannerTxt {
 
