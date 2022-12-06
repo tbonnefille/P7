@@ -6,6 +6,120 @@ import Rater from "./Rater";
 import Data from "../data/logements.json";
 
 import { useParams } from "react-router-dom";
+import Styled from "styled-components";
+
+const StyledWrapper = Styled.section`
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-left: 5%;
+margin-right: 5%;
+color: #FF6060;
+
+  @media (max-width: 768px) {
+        
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: #FF6060;
+  flex-wrap: wrap;
+  }
+`;
+
+const StyledTitleTag = Styled.div`
+width: 75%;
+
+  @media (max-width: 768px) {
+    width: 100%;     
+  }
+`;
+
+const StyledTagWrap = Styled.div`
+display: flex;
+flex-direction: row;
+text-align: center;
+width: 100%;
+`;
+
+const StyledTag = Styled.div`
+background: #FF6060;
+border-radius: 10px;
+height: 25px;
+color: #FFFFFF;
+font-size: 14px;
+margin-right: 1%;
+display: flex;
+align-items: center;
+justify-content: center;
+padding-left: 3%;
+padding-right: 3%;
+`;
+
+const StyledHostRating = Styled.div`
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: flex-end;
+width: 25%;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2%;  
+  }
+`;
+
+const StyledHost = Styled.div`
+display: flex;
+flex-direction: row;
+width: 100%;
+justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;     
+  }
+`;
+
+const StyledName = Styled.div`
+padding-right: 2%;
+`;
+
+const StyledCircle = Styled.div`
+background-color: #C4C4C4;
+border-radius: 50%;
+height: 64px;
+width: 64px;
+
+  @media (max-width: 768px) {
+    background-color: #C4C4C4;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;      
+  }
+`;
+
+const StyledPortrait = Styled.img`
+border-radius: 50%;
+object-fit: cover;
+height: 64px;
+width: 64px;
+}
+
+  @media (max-width: 768px) {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 32px;
+    width: 32px; 
+  }
+`;
 
 function Wrapper() {
   /* Récupère la bonne fiche */
@@ -14,42 +128,31 @@ function Wrapper() {
 
   /* Tags */
   const tagsLogement = ficheLogement.tags.map((tags, index) => {
-    return (
-      <div className="tag" key={index}>
-        {" "}
-        {tags}
-      </div>
-    );
+    return <StyledTag key={index}> {tags}</StyledTag>;
   });
 
   return (
-    <section id="wrapper">
-      <div id="title-tag">
+    <StyledWrapper>
+      <StyledTitleTag>
         <div>
           <h1>{ficheLogement.title}</h1>
           <p>{ficheLogement.location}</p>
         </div>
 
-        <div id="tag-wrap">{tagsLogement}</div>
-      </div>
+        <StyledTagWrap>{tagsLogement}</StyledTagWrap>
+      </StyledTitleTag>
 
-      <div id="host-rating">
-        <div id="host">
-          <div id="name">{ficheLogement.host.name}</div>
-          <div id="circle">
-            <img
-              className="imgPortrait"
-              src={ficheLogement.host.picture}
-              alt="portrait"
-            />
-          </div>
-        </div>
+      <StyledHostRating>
+        <StyledHost>
+          <StyledName>{ficheLogement.host.name}</StyledName>
+          <StyledCircle>
+            <StyledPortrait src={ficheLogement.host.picture} alt="portrait" />
+          </StyledCircle>
+        </StyledHost>
 
-        <div id="rating">
-          <Rater rating={ficheLogement.rating} />
-        </div>
-      </div>
-    </section>
+        <Rater rating={ficheLogement.rating} />
+      </StyledHostRating>
+    </StyledWrapper>
   );
 }
 

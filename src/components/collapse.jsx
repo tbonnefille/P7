@@ -20,12 +20,12 @@ function Collapse(props) {
 
           <div className="toggle" onClick={handleToggle}>
             <img
-              className="arrowDown"
+            className = "arrowDown"
               src={ArrowBack}
               alt="flêche vers le bas"
             />
             <img
-              className="arrowUp"
+            className = "arrowUp"
               src={ArrowNext}
               alt="flêche vers le haut"
             />

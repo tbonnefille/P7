@@ -2,11 +2,11 @@ import React from "react";
 import Styled from "styled-components";
 
 const StyledRater = Styled.div`
-    font-size: 42px;
-    color: blue;
+font-size: 42px;
+color: #FF6060;
+
     @media (max-width: 768px) {
-        font-size: 24px;
-        color: green;
+        font-size: 28px;      
     }
 `;
 

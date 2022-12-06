@@ -18,12 +18,10 @@ function Carrousel() {
  const id = useParams();
  const ficheLogement = Data.find(logement => logement.id === id.id);
 
-
+/* Origine des images */
 const diapos= ficheLogement.pictures
 
-
-
-    /* Crée un Hook d'état */
+    /* Logique des states du carrousel */
     const [currentSlide, changeImg] = useState(0);
     let imgNumber = diapos.length;
 

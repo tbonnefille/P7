@@ -4,41 +4,105 @@ import "../style.css";
 */
 import Logo from "../images/LOGO.svg";
 import { NavLink } from "react-router-dom";
+import Styled from "styled-components";
 
-function HeaderH() {
+const StyledHeader = Styled.header`
+display: flex;
+flex-direction: row-reverse;
+justify-content: space-between;
+padding-left: 5%;
+padding-right: 5%;
+margin-bottom: 4%;
+
+  @media (max-width: 768px) {
+      font-size: 28px;      
+  }
+`;
+
+const StyledNav = Styled.nav`
+width: 30%;
+display: flex;
+align-items: center;
+text-align: center;
+
+  @media (max-width: 768px) {
+    width: 80%;   
+  }
+`;
+
+const StyledNavUl = Styled.ul`
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: space-between;
+align-content: center;
+width: 100%;
+font-weight: 500;
+font-size: 24px;
+line-height: 142.6%;
+
+  @media all and (min-width:769px) and (max-width:992px) {
+    font-size: 18px; 
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;      
+  }
+`;
+
+const StyledLi = Styled.li`
+&:hover {
+text-decoration-line: underline;
+color: #FF6060;
+}
+`;
+
+const StyledLogo = Styled.div`
+width: auto;
+text-align: center;
+padding-top: 5%;
+padding-bottom: 5%;
+`;
+
+const StyledLogoImg = Styled.img`
+max-width: 100%;
+height: auto;
+`;
+
+function Header() {
   let activeStyle = { color: "#FF6060", textDecoration: "underline" };
 
   return (
-    <header className="header">
-      <div className="nav">
-        <ul id="navUl">
-          <li className="li">
+    <StyledHeader>
+      <StyledNav>
+        <StyledNavUl>
+          <StyledLi>
             <NavLink
               to={"/"}
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               Accueil
             </NavLink>
-          </li>
+          </StyledLi>
 
-          <li className="li">
+          <StyledLi>
             <NavLink
               to={"/apropos"}
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               A propos
             </NavLink>
-          </li>
-        </ul>
-      </div>
+          </StyledLi>
+        </StyledNavUl>
+      </StyledNav>
 
       <div>
-        <div id="logo">
-          <img id="logo-img" src={Logo} alt="logo" />
-        </div>
+        <StyledLogo>
+          <StyledLogoImg src={Logo} alt="logo" />
+        </StyledLogo>
       </div>
-    </header>
+    </StyledHeader>
   );
 }
 
-export default HeaderH;
+export default Header;

@@ -2,13 +2,61 @@ import React from "react";
 /*
 import "../style.css";
 */
+import Styled from "styled-components";
+
 import Collapse from "./Collapse";
+
+const StyledContainer = Styled.div`
+margin-left: 5%;
+margin-right: 5%;
+background:color: #FF6060;
+
+@media all and (max-width: 768px) {
+
+  margin-bottom: 25%;
+}
+
+`;
+
+const StyledAbout = Styled.div`
+display: flex;
+    justify-content: center;
+`;
+
+const StyledCollapseWrap = Styled.div`
+display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+`;
+
+const StyledMiguel = Styled.div`
+width: 100px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 142.6%;
+    /* or 19px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background-color: #FFFFFF;
+    margin-left: 15%;
+    margin-top: 10%;
+
+    @media all and (max-width: 768px) {
+
+      display: none;
+    }
+`;
 
 function About() {
   return (
-    <main>
-      <div id="about">
-        <div className="collapse-wrap">
+    <StyledContainer>
+      <StyledAbout>
+        <StyledCollapseWrap>
           <Collapse titre="Fiabilité">
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
             photos sont conformes aux logements, et toutes les informations sont
@@ -35,13 +83,11 @@ function About() {
             les standards sont bien respectés. Nous organisons également des
             ateliers sur la sécurité domestique pour nos hôtes.
           </Collapse>
-        </div>
-      </div>
+        </StyledCollapseWrap>
+      </StyledAbout>
 
-      <div id="Miguel">
-        <p>Miguel</p>
-      </div>
-    </main>
+      <StyledMiguel>Miguel</StyledMiguel>
+    </StyledContainer>
   );
 }
 

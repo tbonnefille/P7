@@ -2,22 +2,55 @@ import React from "react";
 /*
 import "../style.css";
 */
-/*
+
+import Styled from "styled-components";
 import background from "../images/kalen_emsley_Bkci_8qcdvQ_unsplash_2.jpg";
-*/
+import backgroundS from "../images/gustavo-alves-YOXSC4zRcxw-unsplash-1.jpg";
+
+const StyledBannerAPWrap = Styled.section`
+   
+margin-bottom: 4%;
+margin-left: 5%;
+margin-right: 5%;
+
+`;
+
+const StyledBannerAP = Styled.div`
+   
+  height: 223px;
+  border-radius: 25px;
+  background: url(${background});
+  background-color: #A8A8A8;
+    background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center center;
+
+  @media all and (min-width:769px) and (max-width:992px) {
+
+    border-radius: 15px;
+    background-position: bottom bottom;
+
+  }
+
+  @media all and (max-width: 768px) {
+
+    height: 223px;
+    border-radius: 10px;
+    background: url(${backgroundS});
+    background-color: #A8A8A8;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center 90%;
+
+  }  
+
+`;
+
 function BannerAP() {
   return (
-    <section className="section_1">
-      <div
-        className="bannerAP"
-        style={{
-         /*
-          background: `linear-gradient(240deg, rgba(255,255,255,0.0) 0%, rgba(0,0,0,0.3) 100%), url(${background})`,
-*/
-         
-        }}
-      ></div>
-    </section>
+    <StyledBannerAPWrap>
+      <StyledBannerAP></StyledBannerAP>
+    </StyledBannerAPWrap>
   );
 }
 
