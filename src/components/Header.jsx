@@ -1,10 +1,11 @@
 import React from "react";
-/*
-import "../style.css";
-*/
+
+import "../styles/style.css";
+
 import Logo from "../images/LOGO.svg";
 import { NavLink } from "react-router-dom";
 import Styled from "styled-components";
+
 
 const StyledHeader = Styled.header`
 display: flex;
@@ -15,7 +16,7 @@ padding-right: 5%;
 margin-bottom: 4%;
 
   @media (max-width: 768px) {
-      font-size: 28px;      
+    font-size: 28px;      
   }
 `;
 
@@ -26,7 +27,7 @@ align-items: center;
 text-align: center;
 
   @media (max-width: 768px) {
-    width: 80%;   
+    width: 40%;   
   }
 `;
 
@@ -62,6 +63,7 @@ width: auto;
 text-align: center;
 padding-top: 5%;
 padding-bottom: 5%;
+margin-right; 5%;
 `;
 
 const StyledLogoImg = Styled.img`

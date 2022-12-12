@@ -1,16 +1,15 @@
 import React from "react";
-/*
-import "../style.css";
-*/
+
+import "../styles/style.css";
+
 import { Link } from "react-router-dom";
 import Styled from "styled-components";
+
 
 const StyledErr404 = Styled.div`
 margin-left: 5%;
 margin-right: 5%;
-border-radius: 25px;
 color: #FF6060;
-
 `;
 
 const StyledErr404Wrap = Styled.div`
@@ -20,7 +19,7 @@ display: flex;
 flex-direction: row;
 flex-wrap: wrap;
 justify-content: center;
-      
+
 `;
 
 const StyledErr404Big = Styled.div`
@@ -29,26 +28,31 @@ font-weight: 700;
 font-size: 288px;
 line-height: 142.6%;
 text-align: center;
+width: 100%;
     
 @media all and (min-width:769px) and (max-width:992px) {
 
   font-size: 192px;
   margin-top: 20%;
+
 }
 
 @media all and (max-width: 768px) {
 
   font-size: 96px;
   margin-top: 20%;
+ 
 }
-
 `;
 
 const StyledErrOups = Styled.div`
+display: flex;
+align-items: flex-end;
+justify-content: center;
 font-weight: 500;
 font-size: 36px;
 line-height: 142.6%;
-margin-bottom: 10%;
+margin-bottom: 15%;
 text-align: center;
 width: 100%;
 
@@ -56,15 +60,14 @@ width: 100%;
 
   font-size: 24px;
   margin-bottom: 15%;
-
 }
 
 @media all and (max-width: 768px) {
 
   font-size: 18px;
-  margin-bottom: 10%;
+  margin-bottom: 30%;
+  width: 60%;
 }
-
 `;
 
 const StyledErrLink = Styled.div`
@@ -76,6 +79,7 @@ line-height: 142.6%;
 text-decoration-line: underline;
 text-align: center;
 margin-bottom: 10%;
+width: 100%;
 
 @media all and (min-width:769px) and (max-width:992px) {
 
@@ -86,9 +90,8 @@ margin-bottom: 10%;
 @media all and (max-width: 768px) {
 
   font-size: 14px;
-  margin-bottom: 20%;
+  margin-bottom: 50%;
 }
-
 `;
 
 function Err404page() {
@@ -98,7 +101,7 @@ function Err404page() {
         <StyledErr404Big>404</StyledErr404Big>
 
         <StyledErrOups>
-          <p>Oups! La page que vous demandez n'existe pas.</p>
+          Oups! La page que vous demandez n'existe pas.
         </StyledErrOups>
 
         <StyledErrLink>

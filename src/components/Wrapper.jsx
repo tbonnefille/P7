@@ -1,10 +1,10 @@
 import React from "react";
-/*
-import "../style.css";
-*/
-import Rater from "./Rater";
-import Data from "../data/logements.json";
 
+import "../styles/style.css";
+import Data from "../data/logements.json";
+import Carrousel from "../components/Carrousel";
+import Content from "../components/Content";
+import Rater from "./Rater";
 import { useParams } from "react-router-dom";
 import Styled from "styled-components";
 
@@ -122,38 +122,54 @@ width: 64px;
 `;
 
 function Wrapper() {
+
   /* Récupère la bonne fiche */
   const id = useParams();
   const ficheLogement = Data.find(logement => logement.id === id.id);
 
-  /* Tags */
-  const tagsLogement = ficheLogement.tags.map((tags, index) => {
-    return <StyledTag key={index}> {tags}</StyledTag>;
-  });
+  if (ficheLogement === undefined) {
+    window.location.replace("/Err404");
 
-  return (
-    <StyledWrapper>
-      <StyledTitleTag>
-        <div>
-          <h1>{ficheLogement.title}</h1>
-          <p>{ficheLogement.location}</p>
-        </div>
+  } else {
 
-        <StyledTagWrap>{tagsLogement}</StyledTagWrap>
-      </StyledTitleTag>
+    /* Tags */
+    const tagsLogement = ficheLogement.tags.map((tags, index) => {
+      return <StyledTag key={index}> {tags}</StyledTag>;
+    });
 
-      <StyledHostRating>
-        <StyledHost>
-          <StyledName>{ficheLogement.host.name}</StyledName>
-          <StyledCircle>
-            <StyledPortrait src={ficheLogement.host.picture} alt="portrait" />
-          </StyledCircle>
-        </StyledHost>
+    return (
+      <div>
+        <Carrousel ficheLogement={ficheLogement} />
 
-        <Rater rating={ficheLogement.rating} />
-      </StyledHostRating>
-    </StyledWrapper>
-  );
+        <StyledWrapper>
+          <StyledTitleTag>
+            <div>
+              <h1>{ficheLogement.title}</h1>
+              <p>{ficheLogement.location}</p>
+            </div>
+
+            <StyledTagWrap>{tagsLogement}</StyledTagWrap>
+          </StyledTitleTag>
+
+          <StyledHostRating>
+            <StyledHost>
+              <StyledName>{ficheLogement.host.name}</StyledName>
+              <StyledCircle>
+                <StyledPortrait
+                  src={ficheLogement.host.picture}
+                  alt="portrait"
+                />
+              </StyledCircle>
+            </StyledHost>
+
+            <Rater rating={ficheLogement.rating} />
+          </StyledHostRating>
+        </StyledWrapper>
+
+        <Content ficheLogement={ficheLogement} />
+      </div>
+    );
+  }
 }
 
 export default Wrapper;

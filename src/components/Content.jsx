@@ -1,11 +1,8 @@
 import React from "react";
-/*
-import "../style.css";
-*/
-import Data from "../data/logements.json";
-import { useParams } from "react-router-dom";
-import Styled from "styled-components";
 
+import "../styles/style.css";
+
+import Styled from "styled-components";
 import Collapse from "./Collapse";
 
 const StyledContent = Styled.section`
@@ -25,11 +22,7 @@ width: 48%;
   }
 `;
 
-function Content() {
-  /* Récupère la bonne fiche */
-  const id = useParams();
-  const ficheLogement = Data.find(logement => logement.id === id.id);
-
+function Content({ ficheLogement }) {
   /* Équipements */
   const equipements = ficheLogement.equipments.map((equipment, index) => {
     return <li key={index}>{equipment}</li>;

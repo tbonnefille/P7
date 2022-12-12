@@ -1,10 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import "../styles/style.css";
 
 import ArrowBack from "../images/arrow_back_ios-24px 2.png";
 import ArrowNext from "../images/Vector.png";
-
-
 
 function Collapse(props) {
   const [active, setActive] = useState(false);
@@ -20,20 +19,18 @@ function Collapse(props) {
 
           <div className="toggle" onClick={handleToggle}>
             <img
-            className = "arrowDown"
+              className="arrowDown"
               src={ArrowBack}
               alt="flêche vers le bas"
             />
             <img
-            className = "arrowUp"
+              className="arrowUp"
               src={ArrowNext}
               alt="flêche vers le haut"
             />
           </div>
         </div>
-        <div className="ddp">
-          {props.children}
-        </div>
+        <div className="ddp">{props.children}</div>
       </div>
     </div>
   );

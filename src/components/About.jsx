@@ -1,15 +1,14 @@
 import React from "react";
-/*
-import "../style.css";
-*/
+
+import "../styles/style.css";
+import Collapse from "./Collapse";
 import Styled from "styled-components";
 
-import Collapse from "./Collapse";
 
 const StyledContainer = Styled.div`
 margin-left: 5%;
 margin-right: 5%;
-background:color: #FF6060;
+
 
 @media all and (max-width: 768px) {
 

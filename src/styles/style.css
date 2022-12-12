@@ -23,7 +23,7 @@ body {
 
 }
 
-/
+
 /* ------------------------------------------------------------COLLAPSE -----------------------------------------------------*/
 
 .toggle {
@@ -80,8 +80,8 @@ body {
 
 .dropdownlarge {
 
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     width: 100%;
 
 }
@@ -121,6 +121,7 @@ body {
 
     display: flex;
     justify-content: center;
+    margin-bottom: 2%;
 
 }
 
@@ -175,14 +176,6 @@ body {
 
 @media all and (min-width:769px) and (max-width:992px) {
 
-    
-    .dropdownlarge {
-
-        margin-top: 2%;
-        margin-bottom: 2%;
-        width: 100%;
-
-    }
 
     .carrousel {
 
@@ -211,14 +204,6 @@ body {
 
 @media all and (max-width: 768px) {
 
-    
-    .dropdownlarge {
-
-        margin-top: 2%;
-        margin-bottom: 2%;
-        width: 100%;
-
-    }
 
     .carrousel {
 

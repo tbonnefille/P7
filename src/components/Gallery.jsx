@@ -1,10 +1,11 @@
 import React from "react";
-/*
-import "../style.css";
-*/
+
+import "../styles/style.css";
+
 import Data from "../data/logements.json";
 import { Link } from "react-router-dom";
 import Styled from "styled-components";
+
 
 const StyledCardList = Styled.div`
 display: flex;
@@ -17,10 +18,6 @@ padding: 4%;
 background-color: #F7F7F7;
 margin-left: 5%;
 margin-right: 5%;
-
-  @media (max-width: 768px) {
-    margin-top: 4%;  
-  }
 `;
 
 const StyledCardHolder = Styled.div`
@@ -36,7 +33,7 @@ margin-bottom: 4%;
 
   @media (max-width: 768px) {
     width: 98%;
-    margin-bottom: 2%;
+    margin-bottom: 6%;
 `;
 
 const StyledCardTitle = Styled.div`

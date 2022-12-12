@@ -1,7 +1,7 @@
 import React from "react";
-/*
-import "../style.css";
-*/
+
+import "../styles/style.css";
+
 import FooterLogo from "../images/LOGO_footer.svg";
 import Styled from "styled-components";
 

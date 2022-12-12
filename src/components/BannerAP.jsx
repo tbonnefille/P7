@@ -1,7 +1,6 @@
 import React from "react";
-/*
-import "../style.css";
-*/
+
+import "../styles/style.css";
 
 import Styled from "styled-components";
 import background from "../images/kalen_emsley_Bkci_8qcdvQ_unsplash_2.jpg";
@@ -20,7 +19,7 @@ const StyledBannerAP = Styled.div`
   height: 223px;
   border-radius: 25px;
   background: url(${background});
-  background-color: #A8A8A8;
+  background-color: #B0B0B0;
     background-blend-mode: multiply;
   background-size: cover;
   background-position: center center;
@@ -37,7 +36,7 @@ const StyledBannerAP = Styled.div`
     height: 223px;
     border-radius: 10px;
     background: url(${backgroundS});
-    background-color: #A8A8A8;
+    background-color: #B0B0B0;
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center 90%;

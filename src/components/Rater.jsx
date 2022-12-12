@@ -11,28 +11,18 @@ color: #FF6060;
 `;
 
 function Rater(props) {
-    const rating = props.rating;
-    const items = [];
-    
-    for (let i = 0; i < 5; i++) {
-        if (i < rating) {
-            items.push(<span key={i}>&#9733;</span>);
-        } else {
-            items.push(<span key={i}>&#9734;</span>);
-        }
+  const rating = props.rating;
+  const items = [];
+
+  for (let i = 0; i < 5; i++) {
+    if (i < rating) {
+      items.push(<span key={i}>&#9733;</span>);
+    } else {
+      items.push(<span key={i}>&#9734;</span>);
     }
-    
-    return (
-        <StyledRater>
-            {items}
-        </StyledRater>
-    );
+  }
+
+  return <StyledRater>{items}</StyledRater>;
 }
 
 export default Rater;
-
-
-
-
-
-/*styled components*/
