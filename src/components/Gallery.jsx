@@ -6,7 +6,6 @@ import Data from "../data/logements.json";
 import { Link } from "react-router-dom";
 import Styled from "styled-components";
 
-
 const StyledCardList = Styled.div`
 display: flex;
 justify-content: space-between;
@@ -46,10 +45,9 @@ function Gallery() {
   return (
     <StyledCardList>
       {Data.map(logement => (
-        <StyledCardHolder>
-          <Link key={logement.id} to={"/Fiche/" + logement.id + "/#"}>
+        <StyledCardHolder key={logement.id}>
+          <Link to={"/Fiche/" + logement.id + "/#"}>
             <div
-              key={logement.cover}
               style={{
                 display: "flex",
                 alignItems: "flex-end",
